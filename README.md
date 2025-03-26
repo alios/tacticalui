@@ -1,26 +1,21 @@
-# A Bevy game template
+# Tactical UI
 
-Template for a Game using the awesome [Bevy engine][bevy] featuring out of the box builds for Windows, Linux, macOS, Web (Wasm), Android, and iOS.
+Tactical UI is based on the ["Template"](https://niklasei.github.io/bevy_game_template/) using the awesome [Bevy engine][bevy] featuring out of the box builds for Windows, Linux, macOS, Web (Wasm), Android, and iOS.
 
-# What does this template give you?
+# Using this repo
 
-* small example ["game"](https://niklasei.github.io/bevy_game_template/)
-* easy setup for running the web build using [trunk] (`trunk serve`) 
+* nix flake support
+    * use nix develop to enter a dev shell with all requirements installed
 * run the native version with `cargo run`
 * workflow for GitHub actions creating releases for Windows, Linux, macOS, and Web (Wasm) ready for distribution
     * the same workflow creates development builds for the mobile platforms (two separate workflows can push to the stores after [some setup](#deploy-mobile-platforms))
     * push a tag in the form of `v[0-9]+.[0-9]+.[0-9]+*` (e.g. `v1.1.42`) to trigger the flow
 * CI workflow that checks your application on all native platforms on every push
 
-WARNING: if you work in a private repository, please be aware that macOS and Windows runners cost more build minutes.
-**For public repositories the workflow runners are free!**
+# Todo left over from template
 
-# How to use this template?
-
- 1. Click "Use this template" on the repository's page
- 2. Look for `ToDo` to use your own game name everywhere
- 3. [Update the icons as described below](#updating-the-icons)
- 4. Start coding :tada:
+ 1. [Update the icons as described below](#updating-the-icons)
+ 2. Start coding :tada:
     * Start the native app: `cargo run`
     * Start the web build: `trunk serve`
         * requires [trunk]: `cargo install --locked trunk`
