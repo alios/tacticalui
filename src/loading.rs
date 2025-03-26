@@ -9,14 +9,14 @@ pub struct LoadingPlugin;
 /// Alternatively you can write the logic to load assets yourself
 /// If interested, take a look at <https://bevy-cheatbook.github.io/features/assets.html>
 impl Plugin for LoadingPlugin {
-    fn build(&self, app: &mut App) {
-        app.add_loading_state(
-            LoadingState::new(GameState::Loading)
-                .continue_to_state(GameState::Menu)
-                .load_collection::<AudioAssets>()
-                .load_collection::<TextureAssets>(),
-        );
-    }
+  fn build(&self, app: &mut App) {
+    app.add_loading_state(
+      LoadingState::new(GameState::Loading)
+        .continue_to_state(GameState::Menu)
+        .load_collection::<AudioAssets>()
+        .load_collection::<TextureAssets>(),
+    );
+  }
 }
 
 // the following asset collections will be loaded during the State `GameState::Loading`
@@ -24,14 +24,14 @@ impl Plugin for LoadingPlugin {
 
 #[derive(AssetCollection, Resource)]
 pub struct AudioAssets {
-    #[asset(path = "audio/flying.ogg")]
-    pub flying: Handle<AudioSource>,
+  #[asset(path = "audio/flying.ogg")]
+  pub flying: Handle<AudioSource>,
 }
 
 #[derive(AssetCollection, Resource)]
 pub struct TextureAssets {
-    #[asset(path = "textures/bevy.png")]
-    pub bevy: Handle<Image>,
-    #[asset(path = "textures/github.png")]
-    pub github: Handle<Image>,
+  #[asset(path = "textures/tacticalui.png")]
+  pub tacticalui: Handle<Image>,
+  #[asset(path = "textures/github.png")]
+  pub github: Handle<Image>,
 }
